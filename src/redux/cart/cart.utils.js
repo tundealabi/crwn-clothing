@@ -15,7 +15,7 @@ export const clearItemFromCart = (cartItems, cartItemToClear) => (
 
 export const removeItemFromCart = (cartItems, cartItemToRemove) => {
     if(cartItemToRemove.quantity === 1){
-        return clearItemFromCart(cartItems, cartItemToRemove)
+        return clearItemFromCart(cartItems, cartItemToRemove);
     }
 
     return cartItems.map(cartItem => (
