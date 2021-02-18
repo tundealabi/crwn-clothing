@@ -5,7 +5,11 @@ import persistedReducer from './root-reducer';
 // import rootReducer from './root-reducer';
 
 
-const middleWares = [logger];
+const middleWares = [];
+
+if(process.env.NODE_ENV === 'development') {
+    middleWares.push(logger);
+}
 
 const store = createStore(persistedReducer, applyMiddleware(...middleWares));
 
